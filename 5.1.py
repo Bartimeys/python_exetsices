@@ -7,7 +7,7 @@ import os
 import csv
 
 
-csvFile = open('5.1.csv', 'w')
+csvFile = open('information_about_files.csv', 'w')
 csvWriter = csv.writer(csvFile, delimiter='\t')
 
 def main():
@@ -50,11 +50,6 @@ def main():
                 counts[0] += len(filenames)
                 counts[1] += len(dirs)
                 process_lists(opts, filenames, [])
-    print("{0} file{1}, {2} director{3}".format(
-          "{0:n}".format(counts[0]) if counts[0] else "no",
-          "s" if counts[0] != 1 else "",
-          "{0:n}".format(counts[1]) if counts[1] else "no",
-          "ies" if counts[1] != 1 else "y"))
     csvWriter.writerow(["{0} file{1}, {2} director{3}".format(
           "{0:n}".format(counts[0]) if counts[0] else "no",
           "s" if counts[0] != 1 else "",
@@ -94,7 +89,6 @@ def process_lists(opts, filenames, dirnames):
     for name in sorted(dirnames):
         keys_lines.append((name, modified + size + name + "/"))
     for key, line in sorted(keys_lines):
-        print(line)
         csvWriter.writerow([line])
 
 
