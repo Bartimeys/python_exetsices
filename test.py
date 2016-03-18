@@ -20,8 +20,8 @@ def main():
     if not files:
         parser.error("no files specified")
 
-    for i, filename in enumerate(files):
-        if i:
+    for a, filename in enumerate(files):
+        if a:
             print()
         if len(files) > 1:
             print("File:", filename)
@@ -39,22 +39,22 @@ def encodeToBytes(filename, blocksize, encoding, decimal):
           "-" * max(len(encoding_text), blocksize)))
     block_number_format = "{0:08} " if decimal else "{0:08X} "
     block_number = 0
-    fh = None
+    myFile = None
     try:
-        fh = open(filename, "rb")
+        myFile = open(filename, "rb")
         while True:
-            data = fh.read(blocksize)
+            data = myFile.read(blocksize)
             if not data:
                 break
             line = [block_number_format.format(block_number)]
             chars = []
-            for i, b in enumerate(data):
-                if i % 4 == 0:
+            for a, x in enumerate(data):
+                if a % 4 == 0:
                     line.append(" ")
-                line.append("{0:02X}".format(b))
-                chars.append(b if 32 <= b < 127 else ord("."))
-            for i in range(len(data), blocksize):
-                if i % 4 == 0:
+                line.append("{0:02X}".format(x))
+                chars.append(x if 32 <= x < 127 else ord("."))
+            for a in range(len(data), blocksize):
+                if a % 4 == 0:
                     line.append(" ")
                 line.append("  ")
             line.append("  ")
@@ -65,8 +65,8 @@ def encodeToBytes(filename, blocksize, encoding, decimal):
     except EnvironmentError as err:
         print(err)
     finally:
-        if fh is not None:
-            fh.close()
+        if myFile is not None:
+            myFile.close()
 
 
 main()
