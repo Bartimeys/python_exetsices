@@ -1,27 +1,15 @@
-from world import me, you
-from my.consciousness import I, your # we need these words
-from feelings import * 
+Dear Python, I love you
+Posted on February 10, 2014 by Liza Daly & filed under programming, python.
 
-always = True # are these statements
+Image of a candy heart reading, "import antigravity"
+Valentine’s Day approaches, and all girls’ thoughts turn to one thing: their favorite programming language.
 
-if you in (depressed, sadness, resignation):
-    print 'my Sweetheart'
-if feel(you) is lonely or feel(you) is neglected:
-    talk_me(this)
-while always:
-    I.take_care_of(you)
-    if you.love() is not me:
-        # I will follow in the madness
-        # I will ...
-        break # down
-for emotion in my.heart:
-    try:
-        your.lover = me
-    except:
-        your.best_friend = me
-if you.hate(me):
-    love(me)
-elif I.annoying():
-    love(me)
-else:
-    love(me, how='deeply', when='now') 
+Like many web developers who began their careers at the dawn of time, I was a Perl programmer who eventually moved to Java because — everyone else did? It certainly seemed like a good idea at the time. I’m proud of the work I did in Java, and at Safari we use Java every day to build and support platforms for our publishing clients. It’s a fine language and all, but my heart belongs to Python.
+
+Safari is a frequent sponsor of many Python advocacy groups: we’ve donated cash to the Python Foundation, bought pizza for the excellent Boston Python Meetup, and this year are Silver Sponsors of PyCon 2014. (Two of our developers will be attending, please say hi.)
+
+Though we use Python largely for web development and our new products like Safari Flow, it’s also our general purpose scripting and — most importantly — fun programming environment. Here are some unexpected uses for this easy-to-learn but powerful language.
+
+
+You can be naughty.
+

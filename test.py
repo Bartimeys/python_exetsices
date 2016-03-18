@@ -25,10 +25,10 @@ def main():
             print()
         if len(files) > 1:
             print("File:", filename)
-        xdump(filename, opts.blocksize, opts.encoding, opts.decimal)
+        encodeToBytes(filename, opts.blocksize, opts.encoding, opts.decimal)
 
 
-def xdump(filename, blocksize, encoding, decimal):
+def encodeToBytes(filename, blocksize, encoding, decimal):
     encoding_text = "{0} characters".format(encoding.upper())
     width = (blocksize * 2) + (blocksize // 4)
     if blocksize % 4:
